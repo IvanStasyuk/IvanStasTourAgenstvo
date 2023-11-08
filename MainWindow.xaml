@@ -22,9 +22,9 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Image Source="/Resources/picture.png" Height="50"></Image>
+            <Image Source="/Resources/logo.png" Height="50"></Image>
         </StackPanel>
-        <TextBlock Text="{Binding ElementName=MyFrame, Path=Content.Title}" Grid.Column="2"></TextBlock>
+        <TextBlock Text="{Binding ElementName=MyFrame, Path=Content.Title}" Width="auto" Grid.Column="2"></TextBlock>
         <Frame x:Name="MyFrame" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="3" ContentRendered="MyFrame_ContentRendered"></Frame>
         <Button x:Name="btnBack" Height="30" Grid.Column="2" Grid.Row="4" Content="Назад" Click="btnBack_Click" Visibility="Collapsed"></Button>
         <Button x:Name="btnVhodGost" Height="30" Grid.Column="4" Content="Войти гостем" Click="btnVhodGost_Click"></Button>

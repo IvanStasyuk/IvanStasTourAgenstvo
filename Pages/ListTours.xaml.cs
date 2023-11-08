@@ -77,7 +77,7 @@ namespace IvanStasTourAgenstvo.Pages
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MyFrame.Navigate(new AddTourList(null));
+            Manager.MyFrame.Navigate(new AddTourList());
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -102,7 +102,7 @@ namespace IvanStasTourAgenstvo.Pages
 
         private void btnEditTovar_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MyFrame.Navigate(new AddTourList((sender as Button).DataContext as Tour));
+            //Manager.MyFrame.Navigate(new AddTourList((sender as Button).DataContext as Tour));
         }
 
         private void ListHotels_Click(object sender, RoutedEventArgs e)

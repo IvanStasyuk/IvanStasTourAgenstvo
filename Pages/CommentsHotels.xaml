@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:IvanStasTourAgenstvo.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CommentsHotels">
+      Title="Комментарии отелей">
 
     <Grid>
         <Grid>
@@ -26,10 +26,10 @@
             </Grid.RowDefinitions>
             <DataGrid x:Name="DataGridHotelsComments" Grid.ColumnSpan="5" Grid.RowSpan="4" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID отеля" Width="280" Binding="{Binding HolelId}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Название" Width="120" Binding="{Binding Text}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Автор" Width="120" Binding="{Binding Author}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Дата создания" Width="280" Binding="{Binding CreationDate}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="ID отеля" Width="200" Binding="{Binding HotelId}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Название" Width="200" Binding="{Binding Text}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Автор" Width="200" Binding="{Binding Author}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Дата создания" Width="200" Binding="{Binding CreationDate}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

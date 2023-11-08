@@ -209,6 +209,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\logo.png" />
     <Resource Include="Resources\Финский романтизм.jpg" />
     <Resource Include="Resources\Финская крепость.jpg" />
     <Resource Include="Resources\Урбанистическая Бразилия.jpg" />
