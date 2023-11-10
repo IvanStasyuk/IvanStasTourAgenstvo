@@ -20,11 +20,13 @@ namespace IvanStasTourAgenstvo.Pages
     /// </summary>
     public partial class AddTourList : Page
     {
-        private Tour AddingOrder = new Tour();
-        public AddTourList()
+        private Tour _currentTour = new Tour();
+        public AddTourList(Tour selectedTour)
         {
             InitializeComponent();
-            DataContext = AddingOrder;
+            if (selectedTour != null)
+                _currentTour = selectedTour;
+            DataContext = _currentTour;
         }
 
         private void SavebtnOrder_Click(object sender, RoutedEventArgs e)
@@ -50,9 +52,9 @@ namespace IvanStasTourAgenstvo.Pages
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (AddingOrder.Price >= 0)
+            if (_currentTour.Id > 0)
             {
-                TourAgentEntities.GetContext().Tour.Add(AddingOrder);
+                TourAgentEntities.GetContext().Tour.Add(_currentTour);
             }
             try
             {

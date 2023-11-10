@@ -34,5 +34,30 @@ namespace IvanStasTourAgenstvo.Pages
                 DataGridHotels.ItemsSource = TourAgentEntities.GetContext().Hotel.ToList();
             }
         }
+
+        private void btnEditTovar_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MyFrame.Navigate(new AddHotelList((sender as Button).DataContext as Hotel));
+        }
+
+        private void btnDelHotel_Click(object sender, RoutedEventArgs e)
+        {
+            var HotelRemoving = DataGridHotels.SelectedItems.Cast<Hotel>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить {HotelRemoving.Count()} элементов",
+                "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    TourAgentEntities.GetContext().Hotel.RemoveRange(HotelRemoving);
+                    TourAgentEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+                    DataGridHotels.ItemsSource = TourAgentEntities.GetContext().Tour.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
     }
 }

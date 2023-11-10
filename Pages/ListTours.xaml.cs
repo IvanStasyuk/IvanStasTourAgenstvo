@@ -77,18 +77,18 @@ namespace IvanStasTourAgenstvo.Pages
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MyFrame.Navigate(new AddTourList());
+            Manager.MyFrame.Navigate(new AddTourList(null));
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var tovarRemoving = DataGridTours.SelectedItems.Cast<Tour>().ToList();
-            if (MessageBox.Show($"Вы точно хотите удалить {tovarRemoving.Count()} элементов",
+            var TourRemoving = DataGridTours.SelectedItems.Cast<Tour>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить {TourRemoving.Count()} элементов",
                 "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    TourAgentEntities.GetContext().Tour.RemoveRange(tovarRemoving);
+                    TourAgentEntities.GetContext().Tour.RemoveRange(TourRemoving);
                     TourAgentEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
                     DataGridTours.ItemsSource = TourAgentEntities.GetContext().Tour.ToList();
@@ -102,7 +102,7 @@ namespace IvanStasTourAgenstvo.Pages
 
         private void btnEditTovar_Click(object sender, RoutedEventArgs e)
         {
-            //Manager.MyFrame.Navigate(new AddTourList((sender as Button).DataContext as Tour));
+            Manager.MyFrame.Navigate(new AddTourList((sender as Button).DataContext as Tour));
         }
 
         private void ListHotels_Click(object sender, RoutedEventArgs e)
