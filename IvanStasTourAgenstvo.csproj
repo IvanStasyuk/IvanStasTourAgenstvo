@@ -95,6 +95,9 @@
     <Compile Include="Pages\ListHotels.xaml.cs">
       <DependentUpon>ListHotels.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ListPeople.xaml.cs">
+      <DependentUpon>ListPeople.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ListTours.xaml.cs">
       <DependentUpon>ListTours.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ListHotels.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListPeople.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

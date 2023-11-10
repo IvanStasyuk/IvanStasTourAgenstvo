@@ -39,6 +39,7 @@
             <TextBox x:Name="CaptchaInput"></TextBox>
         </StackPanel>
         <Button x:Name="Vhod" Grid.Column="2" Grid.Row="4" Content="Войти" Style="{StaticResource Save}" Click="Vhod_Click"></Button>
-        <Button x:Name="Regbtn" Content="Регистрация" Grid.Row="4" Click="Regbtn_Click"></Button>
+        <Button x:Name="Regbtn" Content="Регистрация" VerticalAlignment="Bottom" Margin="5" Grid.Row="3" Click="Regbtn_Click"></Button>
+        <Button x:Name="ViewPeople" Content="Пользователи" Grid.Row="4" Click="ViewPeople_Click"></Button>
     </Grid>
 </Page>

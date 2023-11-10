@@ -76,5 +76,10 @@ namespace IvanStasTourAgenstvo.Pages
                 MessageBox.Show("Ошибка" + ex.Message.ToString() + "Критическая ошибка приложения", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+        private void ViewPeople_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MyFrame.Navigate(new ListPeople());
+        }
     }
 }
